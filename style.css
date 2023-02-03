@@ -1,0 +1,74 @@
+/*
+Theme Name: OnePlant
+Theme URI: https://liamconkin.ca
+Author: Liam Conkin
+Author URI: https://liamconkin.ca
+Description: OnePlant is a WordPress Theme used to develop OnePlant, a eCommerce plant shop 
+Requires at least: 5.3
+Tested up to: 6.0
+Requires PHP: 5.6
+Version: 1.7
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: oneplant
+Tags: one-column, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready
+
+OnePlant WordPress Theme, (C) 2023 WordPress.org
+OnePlant is distributed under the terms of the GNU GPL.
+*/
+
+/* search input */
+.wp-block-search__input {
+    height: 40px;
+    padding-left: 20px;
+}
+
+/* header styles, important is required */
+.custom-header {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "logo cart"
+    "search search";
+    gap: 1rem !important;
+}
+
+.custom-header__logo {
+    grid-area: logo;
+}
+
+.custom-header__search {
+    grid-area: search;
+}
+
+.custom-header__cart {
+    grid-area: cart;
+    display: flex;
+    justify-content: right;
+}
+
+@media only screen and (min-width:600px) {
+    .custom-header {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "logo search cart";
+        gap: 1rem!important;
+    }
+}
+
+/* Main Menu Selected Item */
+.current-menu-item a {
+    font-weight: 800;
+}
+
+
+/* WooCommerce */
+.rounded-corners {
+    overflow: hidden;
+    border-radius: var(--wp--custom--rounded-corners);
+}
+
+.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail {
+    overflow: hidden;
+    border-radius: var(--wp--custom--rounded-corners);
+}
